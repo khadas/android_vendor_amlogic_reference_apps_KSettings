@@ -14,7 +14,7 @@ public class BootReceiver extends BroadcastReceiver {
 	private static final String TAG = "KSettingsBootReceiver";
 	private String value;
 	private int val ;
-
+	private static final String TV_USER_SETUP_COMPLETE = "tv_user_setup_complete";
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		// TODO Auto-generated method stub
@@ -23,9 +23,20 @@ public class BootReceiver extends BroadcastReceiver {
 
 		if (Intent.ACTION_BOOT_COMPLETED.equals(action)) {
 			Log.e(TAG, "hlm5 start Kvim4ToolsService");
+			skipUserSetup(context);
+			context.startService(new Intent(context, Kvim4ToolsService.class));
 			cam_ir_cut_control();
 		}
 	}
+
+    private void skipUserSetup(Context context) {
+        if (Settings.Secure.getInt(context.getContentResolver(), TV_USER_SETUP_COMPLETE, 0) == 0) {
+            Log.d(TAG, "force skip tv user setup");
+            Settings.Global.putInt(context.getContentResolver(), Settings.Global.DEVICE_PROVISIONED, 1);
+            Settings.Secure.putInt(context.getContentResolver(), Settings.Secure.USER_SETUP_COMPLETE, 1);
+            Settings.Secure.putInt(context.getContentResolver(), TV_USER_SETUP_COMPLETE, 1);
+        }
+    }
 
 	private void cam_ir_cut_control() {
         File file = new File("/sys/bus/i2c/drivers/ov08a10/2-0036");
