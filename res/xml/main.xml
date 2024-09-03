@@ -80,14 +80,6 @@
     </PreferenceScreen>
 
     <PreferenceScreen
-        android:title="@string/Logo_LED_control"
-        android:iconSpaceReserved="false">
-        <intent
-            android:targetClass="com.khadas.ksettings.LogoLED_Preference"
-            android:targetPackage="com.khadas.ksettings" />
-    </PreferenceScreen>
-
-    <PreferenceScreen
         android:title="@string/Timer"
         android:iconSpaceReserved="false">
         <intent

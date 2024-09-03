@@ -111,7 +111,7 @@ public class MainActivity extends PreferenceActivity implements Preference.OnPre
 			//CAM1_IR_CUT_Preference.setEnabled(false);
 			preferenceScreen.removePreference(CAM1_IR_CUT_Preference);
 		}
-
+		startService(new Intent(this, Kvim4ToolsService.class));
     }
 
     /**

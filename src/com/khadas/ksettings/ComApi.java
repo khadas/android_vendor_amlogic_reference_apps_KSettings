@@ -14,7 +14,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Method;
 
-
 public class ComApi {
 
     //add by wangjunhao to reboot
