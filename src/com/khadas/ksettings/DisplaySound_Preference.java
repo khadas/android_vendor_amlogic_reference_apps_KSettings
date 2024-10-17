@@ -209,7 +209,7 @@ public class DisplaySound_Preference extends PreferenceActivity implements Prefe
         }else if (MORE_DISPLAY_SETTINGS.equals(key)){
             SystemProperties.set("persist.sys.use.tv_settings","1");
             Intent intent = new Intent();
-            intent.setClassName("com.android.tv.settings", "com.android.tv.settings.device.displaysound.DisplaySoundActivity");
+            intent.setClassName("com.droidlogic.tv.settings", "com.droidlogic.tv.settings.more.MorePrefFragmentActivity");
             startActivity(intent);
             SystemProperties.set("persist.sys.use.tv_settings","0");
         }

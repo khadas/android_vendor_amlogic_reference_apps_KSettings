@@ -3,7 +3,7 @@
     <string name="HDMI_IN">HDMI输入</string>
     <string name="Ethernet">有线网络</string>
     <string name="Hotspot">热点源</string>
-    <string name="DisplaySound_Setting">显示和声音</string>
+    <string name="DisplaySound_Setting">显示</string>
     <string name="PowerKey">电源按键定义</string>
     <string name="FunctionKey">功能按键定义</string>
     <string name="LEDs">LED灯控制</string>
@@ -40,7 +40,7 @@
 
     <string name="FunctionKey_dialog">请输入键值</string>
 
-    <string name="More_DisplaySound_Setting">更多显示和声音设置</string>
+    <string name="More_DisplaySound_Setting">更多显示</string>
     <string name="Display_screen_rotation">屏幕方向</string>
     <string name="Display_screen_density">屏幕密度</string>
 
@@ -93,12 +93,10 @@
     <string-array name="PowerKey_array">
         <item>休眠</item>
         <item>关机</item>
-        <item>重启</item>
     </string-array>
     <string-array name="PowerKey_array_value">
         <item>0</item>
         <item>1</item>
-        <item>2</item>
     </string-array>
 
     <string name="LED_white">白色LED灯</string>

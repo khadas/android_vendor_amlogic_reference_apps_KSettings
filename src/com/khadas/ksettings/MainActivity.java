@@ -106,7 +106,7 @@ public class MainActivity extends PreferenceActivity implements Preference.OnPre
         HDMI_IN_Preference.setOnPreferenceClickListener(this);
         UPDATER_Preference = (Preference) findPreference(UPDATER_KEY);
         UPDATER_Preference.setOnPreferenceClickListener(this);
-        File file = new File("/sys/bus/i2c/drivers/ov08a10/2-0036");
+        File file = new File("/sys/bus/i2c/drivers/amlsens/2-0036");
         if (!file.exists()){
 			//CAM1_IR_CUT_Preference.setEnabled(false);
 			preferenceScreen.removePreference(CAM1_IR_CUT_Preference);

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     android:sharedUserId="android.uid.system"
-    android:versionCode="1"
-    android:versionName="1.0"
+	android:versionCode="2"
+	android:versionName="2.0"
     package="com.khadas.ksettings"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-sdk android:minSdkVersion="31"/>
+    <uses-sdk android:minSdkVersion="23"/>
 
     <!--android:sharedUserId="android.uid.system"-->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
 
